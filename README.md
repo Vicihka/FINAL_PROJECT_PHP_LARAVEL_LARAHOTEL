@@ -6,12 +6,10 @@ A hotel room booking web application built with Laravel — PHP Laravel Final Pr
 
 ## Team
 
-| Name | Role |
-|------|------|
-| Yeun Vicheka | Leader / Full Stack |
-| Kim Hun | Developer |
-| Meimei Siv | Developer |
-| Heang Lyly | Developer |
+- Yeun Vicheka
+- Engreaksmey Kimreach
+- Meimei Siv
+- Heang Lyly
 
 ---
 
