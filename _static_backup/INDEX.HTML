@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LaraHotel - Luxury Stays</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav>
+            <a href="INDEX.HTML" class="logo">
+                <div class="logo-icon"></div>
+                LaraHotel
+            </a>
+            <div class="nav-center-links">
+                <a href="INDEX.HTML" class="active-link">Home</a>
+                <a href="ABOUT.HTML">About</a>
+                <a href="ROOMS.HTML">Rooms</a>
+                <a href="AMENITIES.HTML">Amenities</a>
+                <a href="CONTACT.HTML">Contact</a>
+            </div>
+            <div class="nav-auth-links">
+                <a href="LOGIN.HTML" class="btn-outline">Login</a>
+                <a href="REGISTER.HTML" class="btn-outline">Sign Up</a>
+            </div>
+        </nav>
+
+        <!-- HERO SECTION WITH BOOKING ENGINE -->
+        <section class="hero">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=1200&q=80"
+                alt="Hotel Pool" class="hero-bg-img">
+
+            <div class="hero-pagination">
+                <div class="page-dot active">1</div>
+                <div class="page-dot">2</div>
+                <div class="page-dot">3</div>
+            </div>
+
+            <div class="hero-content">
+                <p class="hero-subtitle">ELEVATE YOUR STAY</p>
+                <h1 class="hero-title">Experience Ultimate Luxury & Comfort!</h1>
+                <a href="ROOM_DETAIL.HTML" class="btn-blue">
+                    Book A Room Now
+                    <span class="icon-play"></span>
+                </a>
+            </div>
+
+            <!-- Comprehensive Check-in / Checkout Search Engine -->
+            <div class="booking-search">
+                <div class="search-field">
+                    <label>Check In</label>
+                    <input type="date" value="2026-09-01">
+                </div>
+                <div class="search-field">
+                    <label>Check Out</label>
+                    <input type="date" value="2026-09-07">
+                </div>
+                <div class="search-field">
+                    <label>Guests</label>
+                    <select>
+                        <option>1 Adult</option>
+                        <option selected>2 Adults</option>
+                        <option>2 Adults, 1 Child</option>
+                        <option>Family Suite</option>
+                    </select>
+                </div>
+                <div class="search-field">
+                    <label>Room Category</label>
+                    <select>
+                        <option>All Rooms</option>
+                        <option>Presidential</option>
+                        <option>Deluxe</option>
+                        <option>Ocean View</option>
+                    </select>
+                </div>
+                <button class="btn-blue search-btn" onclick="alert('Checking availability across systems...')">Check
+                    Availability</button>
+            </div>
+        </section>
+
+
+
+        <!-- FEATURED ROOMS SECTION -->
+        <section class="featured-rooms">
+            <div class="section-header">
+                <div>
+                    <h2>Signature Rooms & Suites</h2>
+                    <p>Unleash Your Comfort With LaraHotel. Click any room to view full details.</p>
+                </div>
+                <div class="slider-nav">
+                    <button id="slider-prev">&lt;</button>
+                    <button class="active" id="slider-next">&gt;</button>
+                </div>
+            </div>
+
+            <div class="rooms-carousel">
+                <div class="rooms-grid" style="grid-template-columns: repeat(3, 1fr);">
+                    <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=600&q=80"
+                            alt="Ocean View Suite">
+                        <div class="room-info">
+                            <div>
+                                <h3 class="room-title">Ocean View Suite</h3>
+                                <p class="room-meta">📍 South Wing, Top Floor</p>
+                            </div>
+                            <div class="rating-pill">★ 4.9</div>
+                        </div>
+                    </div>
+                    <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=600&q=80"
+                            alt="Deluxe Double Room">
+                        <div class="room-info">
+                            <div>
+                                <h3 class="room-title">Deluxe Double Room</h3>
+                                <p class="room-meta">📍 Garden Wing</p>
+                            </div>
+                            <div class="rating-pill">★ 4.7</div>
+                        </div>
+                    </div>
+                    <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&w=600&q=80"
+                            alt="Presidential Villa">
+                        <div class="room-info">
+                            <div>
+                                <h3 class="room-title">Presidential Villa</h3>
+                                <p class="room-meta">📍 Private Beachfront</p>
+                            </div>
+                            <div class="rating-pill">★ 5.0</div>
+                        </div>
+                    </div>
+                    <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                        <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=600&q=80"
+                            alt="Executive Suite">
+                        <div class="room-info">
+                            <div>
+                                <h3 class="room-title">Executive Suite</h3>
+                                <p class="room-meta">📍 Business District</p>
+                            </div>
+                            <div class="rating-pill">★ 4.8</div>
+                        </div>
+                    </div>
+                    <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                        <img src="https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?auto=format&fit=crop&w=600&q=80"
+                            alt="Family Connected Room">
+                        <div class="room-info">
+                            <div>
+                                <h3 class="room-title">Family Connected Room</h3>
+                                <p class="room-meta">📍 East Wing</p>
+                            </div>
+                            <div class="rating-pill">★ 4.6</div>
+                        </div>
+                    </div>
+                    <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                        <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=600&q=80"
+                            alt="Honeymoon Penthouse">
+                        <div class="room-info">
+                            <div>
+                                <h3 class="room-title">Honeymoon Penthouse</h3>
+                                <p class="room-meta">📍 Sky Tower</p>
+                            </div>
+                            <div class="rating-pill">★ 5.0</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- HOTEL CARE & SYSTEM SECION -->
+        <section class="hotel-care">
+            <div class="care-content">
+                <h2 style="font-weight: 300;">Elevated Standards &amp; Bespoke Services</h2>
+                <p>At LaraHotel, excellence is our standard. From seamless arrivals to meticulous room preparations, our
+                    operational framework is designed to anticipate your every need. Experience the pinnacle of
+                    hospitality, where cutting-edge management elegantly meets refined personal care.</p>
+
+                <div class="care-grid">
+                    <div class="care-item">
+                        <div class="care-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Impeccable Housekeeping</h4>
+                            <p>Daily deep hygiene cleans, premium hypoallergenic linens, and exclusive turndown
+                                services.</p>
+                        </div>
+                    </div>
+                    <div class="care-item">
+                        <div class="care-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Smart Concierge</h4>
+                            <p>Secure mobile keys, seamless room requests, and personalized itineraries at your
+                                fingertips.</p>
+                        </div>
+                    </div>
+                    <div class="care-item">
+                        <div class="care-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <path d="M8 14s1.5 2 4 2 4-2 4-2M9 9h.01M15 9h.01"></path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Exclusive Wellness Access</h4>
+                            <p>Complimentary entry to our state-of-the-art spa and infinity pool complex.</p>
+                        </div>
+                    </div>
+                    <div class="care-item">
+                        <div class="care-icon">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                                viewBox="0 0 24 24">
+                                <path d="M3 18v-6a9 9 0 0 1 18 0v6"></path>
+                                <path
+                                    d="M21 19a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2v-2h8v2zM3 19a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2v-2H3v2z">
+                                </path>
+                            </svg>
+                        </div>
+                        <div>
+                            <h4>Exquisite In-Room Dining</h4>
+                            <p>Curated culinary experiences delivered discreetly to your suite, 24 hours a day.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="care-image">
+                <img src="https://images.unsplash.com/photo-1551882547-ff40c0d509af?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                    alt="Hotel Amenities">
+                <div class="care-floating-badge">
+                    <h3>100%</h3>
+                    <p>Guest Satisfaction</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROCESS SECTION -->
+        <section class="process-section">
+            <h2 style="font-weight: 300;">A Seamless Reservation Experience</h2>
+            <p>Our sophisticated booking engine ensures that securing your luxury retreat is as effortless as staying
+                with us.</p>
+
+            <div class="process-grid">
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                            <path d="M16 2v4M8 2v4M3 10h18"></path>
+                        </svg>
+                    </div>
+                    <h3>Select Your Dates</h3>
+                    <p>Input your intended arrival and departure to view our exclusive portfolio of available suites.
+                    </p>
+                </div>
+                <div class="process-card active">
+                    <img src="https://images.unsplash.com/photo-1621293954908-907159247fc8?auto=format&amp;fit=crop&amp;w=600&amp;q=80"
+                        alt="Luxury Bed" class="process-floating-img">
+                    <div class="process-icon" style="background: rgba(255,255,255,0.2); color:white;">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <path d="M3 12h18v8H3z"></path>
+                            <path d="M3 12V4h18v8M8 12V8M16 12V8"></path>
+                        </svg>
+                    </div>
+                    <h3>Choose Your Suite</h3>
+                    <p>Browse detailed dimensions, layouts, and curated amenities to find your perfect sanctuary.</p>
+                    <a href="ROOM_DETAIL.HTML" class="learn-more">EXPLORE SUITES &gt;</a>
+                </div>
+                <div class="process-card">
+                    <div class="process-icon">
+                        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2"
+                            viewBox="0 0 24 24">
+                            <rect x="1" y="4" width="22" height="16" rx="2" ry="2"></rect>
+                            <path d="M1 10h22"></path>
+                        </svg>
+                    </div>
+                    <h3>Secure &amp; Relax</h3>
+                    <p>Confirm your reservation instantly through our encrypted gateway and await your tranquil escape.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PROMO SECTION -->
+        <section class="promo-section">
+            <div class="promo-grid">
+                <div class="promo-img-wrapper">
+                    <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&amp;fit=crop&amp;w=800&amp;q=80"
+                        alt="Relaxing Spa">
+                </div>
+                <div class="promo-text">
+                    <div class="promo-text-inner">
+                        <p style="font-size: 11px; text-transform: uppercase; font-weight: 600; letter-spacing: 2px;">
+                            The Epitome of Refinement</p>
+                    </div>
+                    <h2 style="font-weight: 300;">IMMERSE YOURSELF IN</h2>
+                    <h2 style="font-size: 56px; font-weight: 700; letter-spacing: -1px;">LARA HOTEL</h2>
+                    <div class="promo-text-inner" style="margin-top: 30px;">
+                        <p>An oasis of tranquility amidst the urban landscape. Surrender to an ambiance of sophisticated
+                            comfort, where every detail is meticulously crafted for your absolute indulgence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="promo-banner" style="background: var(--dark-text); color: white; border-radius: 20px;">
+                <div class="promo-offer">
+                    <h3 style="color: white; font-weight: 300;">Exclusive Offer</h3>
+                    <p style="color: #9CA3AF;">Reserve your suite directly with us<br>and enjoy priority upgrades and
+                        zero hidden fees.</p>
+                </div>
+                <a href="ROOM_DETAIL.HTML" class="btn-blue"
+                    style="font-size: 16px; padding: 14px 40px; box-shadow:none; background: white; color: var(--dark-text);">Reserve
+                    Now &rarr;</a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="INDEX.HTML" class="logo">
+                        <div class="logo-icon"></div>
+                        LaraHotel
+                    </a>
+                    <p>Experience the epitome of luxury, breathtaking views, and unparalleled hospitality at LaraHotel.
+                        Your comfort is our system's top priority.</p>
+                    <div class="footer-socials">
+                        <a href="#">🐦</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐙</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="INDEX.HTML">Home Overview</a>
+                        <a href="ABOUT.HTML">About LaraHotel</a>
+                        <a href="ROOMS.HTML">Our Rooms</a>
+                        <a href="AMENITIES.HTML">Our Amenities</a>
+                        <a href="CONTACT.HTML">Contact & Location</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Support</h4>
+                    <div class="footer-links">
+                        <a href="LOGIN.HTML">Account Login</a>
+                        <a href="REGISTER.HTML">Guest Registration</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: #9CA3AF; font-size: 14px; margin-bottom: 12px;">Subscribe to receive premium deals
+                        and updates directly to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LaraHotel Systems. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">English (US)</a>
+                    <a href="#">USD ($)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

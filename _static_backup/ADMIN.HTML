@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - LaraHotel</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body class="admin-body">
+
+    <div class="admin-layout">
+        
+        <!-- SIDEBAR -->
+        <aside class="admin-sidebar">
+            <a href="INDEX.HTML" class="logo" style="margin-bottom: 40px; justify-content: flex-start;">
+                <div class="logo-icon"></div>
+                LaraHotel
+            </a>
+
+            <nav class="admin-nav">
+                <a href="ADMIN.HTML" class="active">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    Dashboard
+                </a>
+                <a href="ADMIN_BOOKINGS.HTML">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                    Bookings
+                </a>
+                <a href="ADMIN_ROOMS.HTML">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                    Rooms
+                </a>
+                <a href="ADMIN_GUESTS.HTML">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                    Guests
+                </a>
+                <a href="#">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path><path d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
+                    Settings
+                </a>
+            </nav>
+
+            <a href="INDEX.HTML" class="btn-outline" style="margin-top: auto; text-align: center; font-size:12px;">Logout</a>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="admin-main">
+            
+            <!-- HEADER -->
+            <header class="admin-header">
+                <div>
+                    <h2 style="font-size: 24px; font-weight: 600; color: var(--dark-text);">Dashboard</h2>
+                    <p style="color: var(--gray-text); font-size: 14px;">Welcome back, Admin. Here's what's happening today.</p>
+                </div>
+
+                <div style="display:flex; gap:20px; align-items:center;">
+                    <div class="admin-search">
+                        <svg width="20" height="20" fill="none" stroke="#9CA3AF" stroke-width="2" viewBox="0 0 24 24"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+                        <input type="text" placeholder="Search bookings, guests...">
+                    </div>
+                    
+                    <div class="admin-profile">
+                        <button style="background:white; border:1px solid #e5e7eb; border-radius:50%; width:40px; height:40px; display:flex; justify-content:center; align-items:center; cursor:pointer;">
+                            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9"></path></svg>
+                        </button>
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="Admin Avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- METRICS -->
+            <div class="metrics-grid">
+                <div class="admin-card">
+                    <div class="admin-card-title">Total Revenue</div>
+                    <div class="admin-card-value">$124,500</div>
+                    <div style="color: #10B981; font-size: 13px; font-weight: 500; margin-top: 8px;">+14.5% from last month</div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-title">Active Bookings</div>
+                    <div class="admin-card-value">142</div>
+                    <div style="color: #10B981; font-size: 13px; font-weight: 500; margin-top: 8px;">+5.2% from last month</div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-title">Available Rooms</div>
+                    <div class="admin-card-value">38</div>
+                    <div style="color: #EF4444; font-size: 13px; font-weight: 500; margin-top: 8px;">12 pending checkout</div>
+                </div>
+                <div class="admin-card">
+                    <div class="admin-card-title">New Guests</div>
+                    <div class="admin-card-value">84</div>
+                    <div style="color: #10B981; font-size: 13px; font-weight: 500; margin-top: 8px;">+2.4% from last month</div>
+                </div>
+            </div>
+
+            <!-- TABLE -->
+            <div class="admin-table-wrapper">
+                <div class="admin-table-header">
+                    <h3>Recent Bookings</h3>
+                    <a href="ADMIN_BOOKINGS.HTML" class="auth-link">View All</a>
+                </div>
+                <table class="admin-table">
+                    <thead>
+                        <tr>
+                            <th>Guest Name</th>
+                            <th>Room Type</th>
+                            <th>Check In</th>
+                            <th>Check Out</th>
+                            <th>Status</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div style="font-weight:600; color:var(--dark-text);">Michael Chen</div>
+                                <div style="font-size:12px; color:var(--gray-text);">michael.c@example.com</div>
+                            </td>
+                            <td style="font-weight:500;">Ocean View Suite</td>
+                            <td>Oct 12, 2026</td>
+                            <td>Oct 15, 2026</td>
+                            <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                            <td style="font-weight:600;">$1,350</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="font-weight:600; color:var(--dark-text);">Sarah Jenkins</div>
+                                <div style="font-size:12px; color:var(--gray-text);">s.jenkins@example.com</div>
+                            </td>
+                            <td style="font-weight:500;">Deluxe King Room</td>
+                            <td>Oct 14, 2026</td>
+                            <td>Oct 16, 2026</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td style="font-weight:600;">$420</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="font-weight:600; color:var(--dark-text);">Robert Fox</div>
+                                <div style="font-size:12px; color:var(--gray-text);">robert.fox@example.com</div>
+                            </td>
+                            <td style="font-weight:500;">Executive Penthouse</td>
+                            <td>Oct 18, 2026</td>
+                            <td>Oct 22, 2026</td>
+                            <td><span class="status-badge status-confirmed">Confirmed</span></td>
+                            <td style="font-weight:600;">$3,200</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div style="font-weight:600; color:var(--dark-text);">Emily Parker</div>
+                                <div style="font-size:12px; color:var(--gray-text);">emily.p@example.com</div>
+                            </td>
+                            <td style="font-weight:500;">Standard Queen</td>
+                            <td>Oct 20, 2026</td>
+                            <td>Oct 21, 2026</td>
+                            <td><span class="status-badge status-pending">Pending</span></td>
+                            <td style="font-weight:600;">$180</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </main>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,119 @@
+@extends('layouts.app')
+
+@section('title', 'Contact')
+
+@section('content')
+<style>
+
+    .contact-panel {
+        position: static;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .contact-panel h3 {
+        font-size: 24px;
+        margin-bottom: 24px;
+    }
+
+
+    .contact-textarea {
+        width: 100%;
+        padding: 14px 16px;
+        border: 1px solid var(--border-color);
+        border-radius: 12px;
+        font-size: 14px;
+        font-family: 'Poppins', sans-serif;
+        background: var(--light-bg);
+        outline: none;
+        transition: border 0.3s;
+        min-height: 120px;
+        resize: vertical;
+    }
+
+    .contact-textarea:focus {
+        border-color: var(--primary-blue);
+    }
+</style>
+
+<div class="page-hero">
+    <h1>Get In Touch</h1>
+    <p>Our concierge team is available 24/7. How can we assist you today?</p>
+</div>
+
+<div class="contact-grid">
+
+    <!-- Contact Info -->
+    <div class="contact-info-card">
+        <h3>Contact Information</h3>
+
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                    <path d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                </svg>
+            </div>
+            <div>
+                <h4>Address</h4>
+                <p>123 Luxury Avenue, Prestige District, NY 10001</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                </svg>
+            </div>
+            <div>
+                <h4>Phone Number</h4>
+                <p>+1 (800) 123-4567</p>
+            </div>
+        </div>
+
+        <div class="contact-item">
+            <div class="contact-icon">
+                <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                    <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                </svg>
+            </div>
+            <div>
+                <h4>Email Address</h4>
+                <p>reception@larahotel.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Message Form -->
+    <div class="booking-panel contact-panel">
+        <h3>Send a Message</h3>
+        <form action="{{ route('contact.send') }}" method="POST">
+            @csrf
+            <div class="form-group">
+                <label>Full Name</label>
+                <input type="text" name="full_name" placeholder="John Doe"
+                    value="{{ old('full_name') }}" required>
+            </div>
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" name="email" placeholder="john@example.com"
+                    value="{{ old('email') }}" required>
+            </div>
+            <div class="form-group">
+                <label>Subject</label>
+                <input type="text" name="subject" placeholder="Inquiry about reservation"
+                    value="{{ old('subject') }}" required>
+            </div>
+            <div class="form-group">
+                <label>Message</label>
+                <textarea name="message" class="contact-textarea"
+                    placeholder="How can we help?" required>{{ old('message') }}</textarea>
+            </div>
+            <button type="submit" class="btn-reserve">Send Message</button>
+        </form>
+    </div>
+
+</div>
+
+@endsection

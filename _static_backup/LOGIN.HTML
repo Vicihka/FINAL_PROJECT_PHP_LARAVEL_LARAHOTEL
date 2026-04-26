@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LaraHotel</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav>
+            <a href="INDEX.HTML" class="logo">
+                <div class="logo-icon"></div>
+                LaraHotel
+            </a>
+            <div class="nav-center-links">
+                <a href="INDEX.HTML">Home</a>
+                <a href="ABOUT.HTML">About</a>
+                <a href="ROOMS.HTML">Rooms</a>
+                <a href="AMENITIES.HTML">Amenities</a>
+                <a href="CONTACT.HTML">Contact</a>
+            </div>
+            <div class="nav-auth-links">
+                <a href="LOGIN.HTML" class="btn-outline"
+                    style="background: var(--primary-blue); color: white;">Login</a>
+                <a href="REGISTER.HTML" class="btn-outline">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="auth-page-layout">
+            <div class="auth-left-image">
+                <img src="https://images.unsplash.com/photo-1542314831-c6a4d14d8373?auto=format&fit=crop&w=800&q=80" alt="Hotel Interior">
+            </div>
+            <div class="auth-right-form">
+                <div class="auth-card">
+                    <h2>Welcome Back</h2>
+                    <p>Log in to access your bookings and premium benefits.</p>
+    
+                    <form onsubmit="event.preventDefault(); window.location.href='INDEX.HTML';">
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" placeholder="you@domain.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Password</label>
+                            <input type="password" placeholder="••••••••" required>
+                        </div>
+    
+                        <div
+                            style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px;">
+                            <label
+                                style="display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--gray-text); cursor: pointer; text-transform: none; font-weight: 500;">
+                                <input type="checkbox" style="width: auto;"> Remember me
+                            </label>
+                            <a href="#" class="auth-link" style="font-weight: 500;">Forgot Password?</a>
+                        </div>
+    
+                        <button type="submit" class="btn-reserve" style="margin-top: 0;">Sign In</button>
+    
+                        <p style="margin-top: 30px; margin-bottom: 0;">Don't have an account? <a href="REGISTER.HTML"
+                                class="auth-link">Register Now</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="INDEX.HTML" class="logo">
+                        <div class="logo-icon"></div>
+                        LaraHotel
+                    </a>
+                    <p>Experience the epitome of luxury, breathtaking views, and unparalleled hospitality at LaraHotel.
+                        Your comfort is our system's top priority.</p>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="INDEX.HTML">Home Overview</a>
+                        <a href="ABOUT.HTML">About LaraHotel</a>
+                        <a href="ROOMS.HTML">Our Rooms</a>
+                        <a href="AMENITIES.HTML">Our Amenities</a>
+                        <a href="CONTACT.HTML">Contact & Location</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Support</h4>
+                    <div class="footer-links">
+                        <a href="LOGIN.HTML">Account Login</a>
+                        <a href="REGISTER.HTML">Guest Registration</a>
+                        <a href="#">Privacy Policy</a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

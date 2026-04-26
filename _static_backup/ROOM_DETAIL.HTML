@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Room Details - LaraHotel</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- NAVBAR -->
+        <nav>
+            <a href="INDEX.HTML" class="logo">
+                <div class="logo-icon"></div>
+                LaraHotel
+            </a>
+            <div class="nav-center-links">
+                <a href="INDEX.HTML">Home</a>
+                <a href="ABOUT.HTML">About</a>
+                <a href="ROOMS.HTML" class="active-link">Rooms</a>
+                <a href="AMENITIES.HTML">Amenities</a>
+                <a href="CONTACT.HTML">Contact</a>
+            </div>
+            <div class="nav-auth-links">
+                <a href="LOGIN.HTML" class="btn-outline">Login</a>
+                <a href="REGISTER.HTML" class="btn-outline">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="breadcrumb">
+            <a href="INDEX.HTML">Home</a> &nbsp; / &nbsp; <a href="#">Signature Suites</a> &nbsp; / &nbsp; Ocean View
+            Suite
+        </div>
+
+        <!-- ROOM GALLERY -->
+        <div class="room-gallery">
+            <div class="room-gallery-item main-item">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=1200&q=80" alt="Ocean View Suite Front">
+            </div>
+            <div class="room-gallery-col">
+                <div class="room-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&w=800&q=80" alt="Suite Bedroom Interior">
+                </div>
+                <div class="room-gallery-item">
+                    <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Suite Marble Bathroom">
+                </div>
+            </div>
+        </div>
+
+        <div class="page-layout">
+
+            <!-- LEFT: DETAILS -->
+            <div class="room-details-content">
+                <div class="room-header">
+                    <h1>Ocean View Suite</h1>
+                    <div class="room-meta-tags">
+                        <div class="meta-tag">📏 850 Sq Ft</div>
+                        <div class="meta-tag">👥 Up to 4 Guests</div>
+                        <div class="meta-tag">🛏️ King Size Tempur-Pedic</div>
+                    </div>
+                </div>
+
+                <p class="room-desc">
+                    Unwind in pure luxury. Our Ocean View Suite features panoramic ceiling-to-floor windows overlooking
+                    the crystal-clear azure waters of the bay. Furnished with imported Italian marble floors and
+                    contemporary oak fixtures, this suite elevates the standard for coastal comfort. The sprawling
+                    private balcony serves as the perfect vantage point for majestic sunsets.
+                    <br><br>
+                    Includes complimentary access to the Private Beach Club and unlimited in-room dining from our
+                    Michelin-star rated chef kitchens.
+                </p>
+
+                <h3 class="section-title">Premium In-Room Amenities</h3>
+                <div class="amenities-grid">
+                    <div class="amenity-item">
+                        <div class="amenity-icon">📶</div>
+                        Fast Fiber Wi-Fi
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">🛁</div>
+                        Deep Soaking Tub
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">☕</div>
+                        Platinum Mini Bar
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">📺</div>
+                        75" Smart OLED TV
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">🔒</div>
+                        Electronic Smart Safe
+                    </div>
+                    <div class="amenity-item">
+                        <div class="amenity-icon">🧹</div>
+                        Daily Deep Cleaning
+                    </div>
+                </div>
+
+                <h3 class="section-title">Hotel Rules & Care</h3>
+                <p class="room-desc" style="margin-bottom: 0;">
+                    Check-in is available anytime after 3:00 PM seamlessly via your mobile key. Check-out is at 11:00
+                    AM.
+                    Pets are unfortunately not allowed in Signature tier suites to maintain hypoallergenic integrity.
+                    Please note that all our rooms are strictly non-smoking environments.
+                </p>
+            </div>
+
+            <!-- RIGHT: STICKY BOOKING PANEL -->
+            <aside>
+                <div class="booking-panel">
+                    <div class="booking-price">$450 <span>/ night</span></div>
+
+                    <form onsubmit="event.preventDefault(); alert('Redirecting to payment gateway...');">
+                        <div class="form-group">
+                            <label>Check In</label>
+                            <input type="date" value="2026-09-01" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Check Out</label>
+                            <input type="date" value="2026-09-04" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Guests</label>
+                            <select>
+                                <option>1 Adult</option>
+                                <option selected>2 Adults</option>
+                                <option>3 Adults</option>
+                                <option>2 Adults, 2 Children</option>
+                            </select>
+                        </div>
+
+                        <div class="price-breakdown">
+                            <div class="price-row">
+                                <span>$450 x 3 nights</span>
+                                <span>$1,350</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Service & Resort Fee</span>
+                                <span>$120</span>
+                            </div>
+                            <div class="price-row">
+                                <span>Taxes (10%)</span>
+                                <span>$147</span>
+                            </div>
+                            <div class="price-total">
+                                <span>Total Price</span>
+                                <span>$1,617</span>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-reserve">Reserve Now</button>
+                        <p style="text-align:center; font-size:12px; color:var(--gray-text); margin-top:16px;">You won't
+                            be charged yet.</p>
+                    </form>
+                </div>
+            </aside>
+
+        </div>
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="INDEX.HTML" class="logo">
+                        <div class="logo-icon"></div>
+                        LaraHotel
+                    </a>
+                    <p>Experience the epitome of luxury, breathtaking views, and unparalleled hospitality at LaraHotel.
+                        Your comfort is our system's top priority.</p>
+                    <div class="footer-socials">
+                        <a href="#">🐦</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐙</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="INDEX.HTML">Home Overview</a>
+                        <a href="ABOUT.HTML">About LaraHotel</a>
+                        <a href="ROOMS.HTML">Our Rooms</a>
+                        <a href="AMENITIES.HTML">Our Amenities</a>
+                        <a href="CONTACT.HTML">Contact & Location</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Support</h4>
+                    <div class="footer-links">
+                        <a href="LOGIN.HTML">Account Login</a>
+                        <a href="REGISTER.HTML">Guest Registration</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: #9CA3AF; font-size: 14px; margin-bottom: 12px;">Subscribe to receive premium deals
+                        and updates directly to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LaraHotel Systems. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">English (US)</a>
+                    <a href="#">USD ($)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

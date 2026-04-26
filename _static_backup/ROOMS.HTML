@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Rooms - LaraHotel</title>
+    <link rel="stylesheet" href="STYLE.CSS">
+</head>
+<body>
+
+    <div class="container">
+        
+        <!-- NAVBAR -->
+        <nav>
+            <a href="INDEX.HTML" class="logo">
+                <div class="logo-icon"></div>
+                LaraHotel
+            </a>
+            <div class="nav-center-links">
+                <a href="INDEX.HTML">Home</a>
+                <a href="ABOUT.HTML">About</a>
+                <a href="ROOMS.HTML" class="active-link">Rooms</a>
+                <a href="AMENITIES.HTML">Amenities</a>
+                <a href="CONTACT.HTML">Contact</a>
+            </div>
+            <div class="nav-auth-links">
+                <a href="LOGIN.HTML" class="btn-outline">Login</a>
+                <a href="REGISTER.HTML" class="btn-outline">Sign Up</a>
+            </div>
+        </nav>
+
+        <div class="page-hero" style="text-align: center; margin: 40px 0 60px;">
+            <h1 style="font-size: 48px; margin-bottom: 16px;">Exquisite Accommodations</h1>
+            <p style="color: var(--gray-text); max-width: 600px; margin: 0 auto;">Choose from our carefully curated selection of suites and rooms, each designed to provide the ultimate sanctuary for your stay.</p>
+        </div>
+
+        <!-- ROOMS FILTER (Visual Only) -->
+        <div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 50px;">
+            <button class="btn-black">All Rooms</button>
+            <button class="btn-outline" style="border-color: #eee; color: var(--gray-text);">Suites</button>
+            <button class="btn-outline" style="border-color: #eee; color: var(--gray-text);">Deluxe</button>
+            <button class="btn-outline" style="border-color: #eee; color: var(--gray-text);">Standard</button>
+        </div>
+
+        <div class="rooms-grid" style="grid-template-columns: repeat(3, 1fr); margin-bottom: 100px;">
+            <!-- Room 1 -->
+            <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=800&q=80" alt="Ocean View Suite">
+                <div class="room-info">
+                    <div>
+                        <div class="room-title">Ocean View Suite</div>
+                        <div class="room-meta">
+                            <span>2 Guests</span> • <span>65m²</span>
+                        </div>
+                    </div>
+                    <div class="rating-pill">4.9</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 18px; color: var(--primary-blue);">$450 <span style="font-size: 12px; color: var(--gray-text); font-weight: 400;">/ night</span></div>
+                    <a href="ROOM_DETAIL.HTML" style="font-size: 12px; font-weight: 600; color: var(--dark-text); text-decoration: none; border-bottom: 1px solid var(--dark-text);">View Details</a>
+                </div>
+            </div>
+
+            <!-- Room 2 -->
+            <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80" alt="Executive Penthouse">
+                <div class="room-info">
+                    <div>
+                        <div class="room-title">Executive Penthouse</div>
+                        <div class="room-meta">
+                            <span>4 Guests</span> • <span>120m²</span>
+                        </div>
+                    </div>
+                    <div class="rating-pill">5.0</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 18px; color: var(--primary-blue);">$850 <span style="font-size: 12px; color: var(--gray-text); font-weight: 400;">/ night</span></div>
+                    <a href="ROOM_DETAIL.HTML" style="font-size: 12px; font-weight: 600; color: var(--dark-text); text-decoration: none; border-bottom: 1px solid var(--dark-text);">View Details</a>
+                </div>
+            </div>
+
+            <!-- Room 3 -->
+            <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?auto=format&fit=crop&w=800&q=80" alt="Deluxe King Room">
+                <div class="room-info">
+                    <div>
+                        <div class="room-title">Deluxe King Room</div>
+                        <div class="room-meta">
+                            <span>2 Guests</span> • <span>45m²</span>
+                        </div>
+                    </div>
+                    <div class="rating-pill">4.8</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 18px; color: var(--primary-blue);">$280 <span style="font-size: 12px; color: var(--gray-text); font-weight: 400;">/ night</span></div>
+                    <a href="ROOM_DETAIL.HTML" style="font-size: 12px; font-weight: 600; color: var(--dark-text); text-decoration: none; border-bottom: 1px solid var(--dark-text);">View Details</a>
+                </div>
+            </div>
+
+            <!-- Room 4 -->
+            <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                <img src="https://images.unsplash.com/photo-1566665797739-1674de7a421a?auto=format&fit=crop&w=800&q=80" alt="Presidential Suite">
+                <div class="room-info">
+                    <div>
+                        <div class="room-title">Presidential Suite</div>
+                        <div class="room-meta">
+                            <span>2 Guests</span> • <span>85m²</span>
+                        </div>
+                    </div>
+                    <div class="rating-pill">4.9</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 18px; color: var(--primary-blue);">$620 <span style="font-size: 12px; color: var(--gray-text); font-weight: 400;">/ night</span></div>
+                    <a href="ROOM_DETAIL.HTML" style="font-size: 12px; font-weight: 600; color: var(--dark-text); text-decoration: none; border-bottom: 1px solid var(--dark-text);">View Details</a>
+                </div>
+            </div>
+
+            <!-- Room 5 -->
+            <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                <img src="https://images.unsplash.com/photo-1595576508898-0ad5c879a061?auto=format&fit=crop&w=800&q=80" alt="Standard Queen Room">
+                <div class="room-info">
+                    <div>
+                        <div class="room-title">Standard Queen Room</div>
+                        <div class="room-meta">
+                            <span>2 Guests</span> • <span>35m²</span>
+                        </div>
+                    </div>
+                    <div class="rating-pill">4.6</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 18px; color: var(--primary-blue);">$180 <span style="font-size: 12px; color: var(--gray-text); font-weight: 400;">/ night</span></div>
+                    <a href="ROOM_DETAIL.HTML" style="font-size: 12px; font-weight: 600; color: var(--dark-text); text-decoration: none; border-bottom: 1px solid var(--dark-text);">View Details</a>
+                </div>
+            </div>
+
+            <!-- Room 6 -->
+            <div class="room-card" onclick="window.location.href='ROOM_DETAIL.HTML'">
+                <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=800&q=80" alt="Junior Suite">
+                <div class="room-info">
+                    <div>
+                        <div class="room-title">Junior Suite</div>
+                        <div class="room-meta">
+                            <span>2 Guests</span> • <span>50m²</span>
+                        </div>
+                    </div>
+                    <div class="rating-pill">4.7</div>
+                </div>
+                <div style="padding: 16px; display: flex; justify-content: space-between; align-items: center;">
+                    <div style="font-weight: 700; font-size: 18px; color: var(--primary-blue);">$320 <span style="font-size: 12px; color: var(--gray-text); font-weight: 400;">/ night</span></div>
+                    <a href="ROOM_DETAIL.HTML" style="font-size: 12px; font-weight: 600; color: var(--dark-text); text-decoration: none; border-bottom: 1px solid var(--dark-text);">View Details</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- GLOBAL FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="INDEX.HTML" class="logo">
+                        <div class="logo-icon"></div>
+                        LaraHotel
+                    </a>
+                    <p>Experience the epitome of luxury, breathtaking views, and unparalleled hospitality at LaraHotel. Your comfort is our system's top priority.</p>
+                    <div class="footer-socials">
+                        <a href="#">🐦</a>
+                        <a href="#">📘</a>
+                        <a href="#">📸</a>
+                        <a href="#">🐙</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="INDEX.HTML">Home Overview</a>
+                        <a href="ABOUT.HTML">About LaraHotel</a>
+                        <a href="ROOMS.HTML">Our Rooms</a>
+                        <a href="AMENITIES.HTML">Our Amenities</a>
+                        <a href="CONTACT.HTML">Contact & Location</a>
+                    </div>
+                </div>
+
+                <div class="footer-links-col">
+                    <h4 class="footer-title">Support</h4>
+                    <div class="footer-links">
+                        <a href="LOGIN.HTML">Account Login</a>
+                        <a href="REGISTER.HTML">Guest Registration</a>
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms of Service</a>
+                    </div>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4 class="footer-title">Newsletter</h4>
+                    <p style="color: #9CA3AF; font-size: 14px; margin-bottom: 12px;">Subscribe to receive premium deals and updates directly to your inbox.</p>
+                    <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Subscribed!');">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 LaraHotel Systems. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">English (US)</a>
+                    <a href="#">USD ($)</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
